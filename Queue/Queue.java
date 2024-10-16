@@ -1,13 +1,14 @@
 
 package Queue;
 
+import java.util.LinkedList;
+
 /**
  *
  * @author HP
  */
 public class Queue {
 
-import java.util.LinkedList;
     private LinkedList<Costumer> customers;
 
     public Queue() {
@@ -50,5 +51,4 @@ import java.util.LinkedList;
         }
     }
 }
-
 
