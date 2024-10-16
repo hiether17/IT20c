@@ -25,5 +25,10 @@ public class Main {
         list.deleteByValue(50);
         list.printList();
         
+         //Move/Swap Pointer
+        System.out.println();
+        System.out.println("Movingn/Swapping node from index 1 to index 0");
+        list.moveNodePointer(0, 1);
+        list.printList();
+	}
    }
-}
