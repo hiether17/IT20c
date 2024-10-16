@@ -92,5 +92,4 @@ public class LinkedList {
             head = movingNode;
         }
     }
-
 }
