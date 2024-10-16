@@ -1,11 +1,15 @@
 
-package Linked_List_int;
+package LinkedList_string;
 
-public class LinkedList {
-	private Node head; 
+/**
+ *
+ * @author HP
+ */
+public class LinkedList_string {    
+    private Node head; 
 
     // Method to add a new node at the end of the list
-    public void add(int data) {
+    public void add(String data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -22,26 +26,25 @@ public class LinkedList {
     public void printList() {
         Node current = head;
         while (current != null) {
-            System.out.print(current.data + " -> ");
+            System.out.println(current.data + " -> ");
             current = current.next;
         }
         System.out.println("null");
     }
-    
-    // Method to delete a node by value
-    public void deleteByValue(int value) {
+ 
+     // Method to delete a node by value
+    public void deleteByValue(String value) {
         if (head == null) return;
 
-        // If the head needs to be removed
-        if (head.data == value) {
+        if (head.data.equals(value)) {
             head = head.next;
             return;
         }
 
         Node current = head;
         while (current.next != null) {
-            if (current.next.data == value) {
-                current.next = current.next.next; 
+            if (current.next.data.equals(value)) {
+                current.next = current.next.next;
                 return;
             }
             current = current.next;
@@ -51,7 +54,7 @@ public class LinkedList {
     // Method to move a node to a new position /swap nodes
     public void moveNodePointer(int currentIndex, int newIndex) {
         if (head == null || currentIndex == newIndex) return;
-        
+
         Node current = head;
         Node prev = null;
         Node movingNode = null;
@@ -72,8 +75,7 @@ public class LinkedList {
         if (movingPrev != null) {
             movingPrev.next = movingNode.next;
         } else {
-        	// Moving the head
-            head = movingNode.next; 
+            head = movingNode.next; // Moving the head
         }
 
         // Insert the node at the new position
@@ -92,12 +94,5 @@ public class LinkedList {
             head = movingNode;
         }
     }
-
-    public void add(String item1) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void deleteByValue(String item6) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
+
